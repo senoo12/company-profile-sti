@@ -1,0 +1,63 @@
+{% extends '../component/base.html' %}
+{% load static %}
+{% block title %} Contact Us {% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+    <div class="row">
+        <div class="text-left ms-5">
+            <h2 style="color: #2845A1;">Ayo Berkolaborasi!</h2>
+            <p style="max-width: 520px;">Kami siap mendengarkan dan membantu Kamu! Isi formulir di samping atau kirim pesan langsung, dan tim kami akan segera menghubungi Kamu.</p>
+        </div>
+    </div>
+    <div class="row align-items-center p-5" data-aos="fade-right">
+        <div class="col-md-6">
+            <form action="{% url 'contact' %}" method="post">
+                {% csrf_token %}
+                <div class="row mb-4">
+                    <div class="col-md-6">
+                        <label for="first_name" class="form-label">First Name</label>
+                        <input type="text" class="form-control form-control-sm" name="first_name" id="first_name" required>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="last_name" class="form-label">Last Name</label>
+                        <input type="text" class="form-control form-control-sm" name="last_name" id="last_name" required>
+                    </div>
+                </div>
+                <div class="mb-4">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" class="form-control form-control-sm" name="email" id="email" required>
+                </div>
+                <div class="mb-4">
+                    <label for="phone_number" class="form-label">Phone Number</label>
+                    <input type="number" class="form-control form-control-sm" name="phone_number" id="phone_number" required>
+                </div>
+                <div class="mb-4">
+                    <label for="name_of_organization" class="form-label">Name of Organization</label>
+                    <input type="text" class="form-control form-control-sm" name="name_of_organization" id="name_of_organization" required>
+                </div>
+                <div class="mb-4">
+                    <label for="message" class="form-label">Message</label>
+                    <textarea name="message" class="form-control form-control-sm" id="message" rows="3" required></textarea>
+                </div>
+                <div class="mb-4">
+                    <label for="service_category_id" class="form-label">Service Category</label>
+                    <select name="service_category_id" class="form-select form-select-sm" id="service_category_id" required>
+                        <option value="" disabled selected>Choose a category</option>
+                        {% for category in categories %}
+                            <option value="{{ category.id }}">{{ category.name_of_category }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+                <div class="text-center">
+                    <button type="submit" class="btn btn-dark py-2 w-100">Submit</button>
+                </div>
+            </form>
+        </div>
+
+        <div class="col d-flex justify-content-center align-items-center d-none d-md-flex" data-aos="fade-left">
+            <img src="../media/profile/hero contact.png" class="" width="340px" alt="">
+        </div>
+    </div>
+</div>
+{% endblock %}

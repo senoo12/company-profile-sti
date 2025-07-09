@@ -1,0 +1,31 @@
+{% extends '../component/base.html' %}
+{% load static %}
+{% block title %} Project {% endblock %}
+
+{% block content %}
+<div class="container" style="margin-top: 100px;">
+    <div class="row mb-5">
+        <div class="text-left">
+            <h2 style="color: #2845A1;" data-aos="fade-down">Project Kami</h2>
+            <p data-aos="fade-right">Kami bangga dapat menyelesaikan berbagai proyek yang tidak hanya menunjukkan kemampuan teknis kami, tetapi juga memberikan dampak nyata bagi bisnis dan pengguna. Setiap proyek yang kami kerjakan dirancang dengan tujuan untuk menghadirkan solusi yang efisien, inovatif, dan dapat disesuaikan dengan kebutuhan spesifik klien.</p>
+        </div>
+    </div>
+
+    <!-- Kategori Navigasi -->
+    <div class="row">
+        <ul class="nav nav-tabs mb-4" data-aos="fade-right">
+            <li class="nav-item">
+                <a class="nav-link {% if not selected_category %}active{% endif %}" href="?">All</a>
+            </li>
+            {% for category in categories %}
+            <li class="nav-item">
+                <a class="nav-link {% if selected_category == category.name_of_category %}active{% endif %}" href="?category={{ category.name_of_category }}">{{ category.name_of_category }}</a>
+            </li>
+            {% endfor %}
+        </ul>
+
+        <!-- Kartu Proyek -->
+        {% include '../component/card_project.html' %}
+    </div>
+</div>
+{% endblock %}

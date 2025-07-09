@@ -1,0 +1,99 @@
+{% extends '../component/base.html' %}
+{% load static %}
+{% block title %} Tentang Kami {% endblock %}
+
+{% block content %}
+<div class="container">
+    <!--section untuk kenalan-->
+    <div class="row" style="margin: 180px 0;">
+        <div class="text-center">
+            <p style="color: #2845A1;" data-aos="fade-down">Kenalan Yuk!</p>
+            <h2 class="w-75 mx-auto" data-aos="zoom-in-up"> <section class="fw-normal">Kami adalah tim terpercaya yang menghadirkan </section> Solusi Inovatif di bidang teknologi untuk membantu Anda mencapai kesuksesan.</h2>
+        </div>
+    </div>
+
+    <!--section untuk tim kami-->
+    <div class="row gy-4" style="margin-top: 280px;">
+        <div class="text-center">
+            <p style="color: #2845A1;" data-aos="fade-up-right">Tim Kami</p>
+            <h2 class="w-75 mx-auto" data-aos="fade-up-left"> <section class="fw-normal">Kami adalah tim profesional yang berkomitmen </section> menghadirkan solusi inovatif dan hasil terbaik untuk Kamu.</h2>
+        </div>
+
+        <!-- Anggota 1 -->
+        <div class="col-md-3" data-aos="zoom-in">
+            <div class="card text-center team-card border-0">
+                <img src="../../media/profile/fadhiil.jpg" alt="Foto Anggota" height="360px" class="team-photo mb-3">
+                <h5 class="fw-bold">Fadhiil Satrio Utomo</h5>
+                <p class="text-muted">UI UX Designer</p>
+            </div>
+        </div>
+        <!-- Anggota 2 -->
+        <div class="col-md-3" data-aos="zoom-in">
+            <div class="card text-center team-card border-0">
+                <img src="../../media/profile/hammam.jpg" alt="Foto Anggota" height="360px" class="team-photo mb-3">
+                <h5 class="fw-bold">Hammam Zaidan Hafizh</h5>
+                <p class="text-muted">Android Developer</p>
+            </div>
+        </div>
+        <!-- Anggota 3 -->
+        <div class="col-md-3" data-aos="zoom-in">
+            <div class="card text-center team-card border-0">
+                <img src="../../media/profile/seno.jpg" alt="Foto Anggota" height="360px" class="team-photo mb-3">
+                <h5 class="fw-bold">Senoaji Pamungkas</h5>
+                <p class="text-muted">Data Scientist</p>
+            </div>
+        </div>
+        <!-- Anggota 4 -->
+        <div class="col-md-3" data-aos="zoom-in">
+            <div class="card text-center team-card border-0">
+                <img src="../../media/profile/dio.jpg" alt="Foto Anggota" height="360px" class="team-photo mb-3">
+                <h5 class="fw-bold">Yusuf Dio Pratama</h5>
+                <p class="text-muted">Web Developer</p>
+            </div>
+        </div>
+    </div>
+
+    <!--section untuk solusi kami-->
+    <div class="row" style="margin-top: 210px;">
+        <div class="text-center">
+            <p style="color: #2845A1;" data-aos="zoom-in-down">Solusi Kami</p>
+            <h2 class="w-75 mx-auto" data-aos="zoom-in-up"> <section class="fw-normal">Kami dapat membantu Kamu <br> </section> mencapai lebih banyak dengan teknologi.</h2>
+        </div>
+
+    <!--  web development -->
+    <div class="row align-items-center mb-5" style="margin-top: 100px;">
+      <div class="col-md-6" data-aos="fade-right">
+        <img src="../../media/profile/web img.png" class="img-fluid rounded" alt="Web Development">
+      </div>
+      <div class="col-md-6" data-aos="fade-left">
+        <h3 style="color: #2845A1;">Web Development</h3>
+        <p>Kami menawarkan solusi pengembangan web untuk kebutuhan bisnis Anda. Dengan desain responsif dan teknologi terkini, kami memastikan website Anda dapat diakses dengan mudah oleh semua pengguna.</p>
+      </div>
+    </div>
+
+    <!-- Solusi 2: Android Development -->
+    <div class="row align-items-center mb-5">
+      <div class="col-md-6 order-md-2" data-aos="fade-right">
+        <img src="../../media/profile/mobile img.png" class="img-fluid rounded " alt="Mobile Development">
+      </div>
+      <div class="col-md-6 order-md-1" data-aos="fade-left">
+        <h3 style="color: #2845A1;">Android Development</h3>
+        <p>Kami menyediakan layanan pengembangan aplikasi Android untuk membantu Anda menjangkau lebih banyak pengguna. Aplikasi kami dirancang untuk memberikan pengalaman pengguna yang optimal.</p>
+      </div>
+    </div>
+
+    <!-- Solusi 3: Big Data -->
+    <div class="row align-items-center">
+      <div class="col-md-6" data-aos="fade-right">
+        <img src="../../media/profile/big data img.png" class="img-fluid rounded" alt="Big Data">
+      </div>
+      <div class="col-md-6" data-aos="fade-left">
+        <h3 style="color: #2845A1;" >Big Data</h3>
+        <p>Solusi big data kami membantu Anda menganalisis data dalam jumlah besar untuk mendapatkan wawasan yang lebih baik. Dengan teknologi analitik terkini, kami mendukung pengambilan keputusan yang lebih cerdas.</p>
+      </div>
+    </div>
+    </div>
+
+    {% include '../component/cta_contact.html' %}
+</div>
+{% endblock %}
